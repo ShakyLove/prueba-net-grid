@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+}
+.div-table {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.div-button {
+  display: flex;
+  justify-content: end;
+}
+.div-button button {
+  height: 50px;
+  width: 50%;
+  border-radius: 10px;
+  border: none;
+  background-color: #34ADE3;
+  color: white;
+  cursor: pointer;
+}
+.mat-elevation-z1 {
+  width: 100%;
+}
+

@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<div>
+  <div style="display: flex; justify-content: center">
+    <mat-card *ngIf="user" class="example-card">
+      <mat-card-header>
+        <mat-card-title>Nombre de usuario</mat-card-title>
+        <mat-card-subtitle>{{ user.username }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <h3>Nombres:</h3>
+          <p>{{ user.name }}</p>
+          <h3>Apellidos:</h3>
+          <p>{{ user.last_name }}</p>
+        </div>
+
+        <div>
+          <h3>Tipo de identificatión:</h3>
+          <p>{{ user.type_identification_id.name }}</p>
+          <h3>Número de identificación:</h3>
+          <p>{{ user.identification }}</p>
+          <h3>Fecha de nacimiento:</h3>
+          <p>{{ user.birth_date }}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

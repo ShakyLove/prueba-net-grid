@@ -1,0 +1,65 @@
+
+<div>
+  <h1>Crear Usuario</h1>
+  <div>
+    <form [formGroup]="userForm">
+      <div>
+        <div style="display: flex;">
+          <mat-form-field style="width: 50%; margin: 10px;" appearance="fill">
+            <mat-label>Nombres</mat-label>
+            <input type="text" matInput formControlName="name" />
+          </mat-form-field>
+
+          <mat-form-field style="width: 50%; margin: 10px;" appearance="fill">
+            <mat-label>Apellidos</mat-label>
+            <input type="text" matInput formControlName="last_name" />
+          </mat-form-field>
+        </div>
+
+        <div style="display: flex;">
+          <mat-form-field class="col-5" appearance="fill" style="width: 50%; margin: 10px;">
+            <mat-label>Tipo de identificacion</mat-label>
+            <mat-select formControlName="type_identification_id">
+              <mat-option
+                *ngFor="let type of typeIdentification"
+                [value]="type.id"
+              >
+                {{ type.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field style="width: 50%; margin: 10px;" appearance="fill">
+            <mat-label>Número de identificación</mat-label>
+            <input type="number" matInput formControlName="identification" />
+          </mat-form-field>
+        </div>
+
+        <mat-form-field style="width: 100%; margin: 10px;" appearance="fill">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input type="date" matInput formControlName="birth_date" />
+        </mat-form-field>
+
+        <mat-form-field style="width: 100%; margin: 10px;" appearance="fill">
+          <mat-label>Nombre de usuario</mat-label>
+          <input type="text" matInput formControlName="username" />
+        </mat-form-field>
+
+        <mat-form-field style="width: 100%; margin: 10px;" appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput formControlName="password" />
+        </mat-form-field>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <button
+          mat-raised-button
+          color="primary"
+          class="btn-detalle btn-hover-raised"
+          (click)="saveUser()"
+        >
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
